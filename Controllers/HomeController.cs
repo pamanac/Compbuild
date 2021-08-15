@@ -18,14 +18,14 @@ namespace Compbuild.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index() //Individual action methods used in routing
         {
-            return View();
+            return View(); //Return Views::Home::Index.cshtml
         }
 
         public IActionResult Privacy()
         {
-            return View();
+            return View(); //Return Views::Home::Privacy.cshtml
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
