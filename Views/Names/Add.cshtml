@@ -1,0 +1,10 @@
+@model Compbuild.Models.Names
+
+@{
+    ViewData["Title"]="Add name";
+}
+
+<form method="post" asp-action="Add">
+    <input asp-for="NAME" class="form-control" />
+    <input type="submit" class="btn btn-primary" value="Submit" />
+</form>

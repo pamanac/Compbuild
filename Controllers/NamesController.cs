@@ -8,27 +8,27 @@ using Microsoft.Extensions.Logging;
 using Compbuild.Models;
 using Compbuild.Data;
 
-namespace Compbuild.Controllers{
-    public class CategoryController : Controller{
+namespace Compbuild.Controllers
+{
+    public class NamesController : Controller {
         private readonly ApplicationDbContext _db;
 
-        public CategoryController(ApplicationDbContext db){
+        public NamesController(ApplicationDbContext db){
             _db = db;
         }
+
         public IActionResult Index(){
-            IEnumerable<Category> objList = _db.Category;
-            return View(objList);
+            IEnumerable<Names> names = _db.Names;
+            return View(names);
         }
 
-        public IActionResult Create(){ 
-            
+        public IActionResult Add(){
             return View();
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create(Category obj){
-            _db.Category.Add(obj);
+        public IActionResult Add(Names new_name){
+            _db.Names.Add(new_name);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
