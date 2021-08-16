@@ -1,0 +1,49 @@
+@model IEnumerable<Compbuild.Models.Category>
+
+@{
+    ViewData["Title"] = "Index Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Categories</h1>
+    <p>Below are the database values: </p>
+    <div class="container p-3">
+        <div class="row pt-4">
+            <div class="col-6">
+                <h2 class="text-primary">Category List</h2>
+            </div>
+            <div class="col-6 text-right">
+                <a asp-controller="Category" asp-action="Create" class="btn btn-primary">
+                    Create New Category
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <br/> <br/>
+
+    @if(Model.Count()>0){
+        <table class="table table-bordered table-striped" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        Category Name ID
+                    </th>
+                    <th>
+                        Display Order
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var obj in Model){
+                    <tr>
+                        <td width="50%">@obj.NAME</td>
+                        <td width="30%">@obj.ORDER</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }else{
+        <p>No categories exist!</p>
+    }
+</div>
