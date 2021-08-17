@@ -33,5 +33,46 @@ namespace Compbuild.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        //edit & delete for names
+        //GET EDIT
+        [HttpGet]
+        public IActionResult Edit(int? ID){
+            if(ID == null || ID == 0)
+                return NotFound();
+            var obj = _db.Names.Find(ID);
+            if(obj == null)
+                return NotFound();
+            return View(obj);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Names obj){
+            if(ModelState.IsValid){
+                _db.Names.Update(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(obj);
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int? ID){
+            if(ID == null || ID == 0)
+                return NotFound();
+            var obj = _db.Names.Find(ID);
+            if(obj == null)
+                return NotFound();
+            return View(obj);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(Names obj){
+            _db.Names.Remove(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

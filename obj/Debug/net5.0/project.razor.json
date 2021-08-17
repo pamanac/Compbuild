@@ -15654,6 +15654,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/pmanac/Code/Github/Compbuild/Views/Names/Edit.cshtml",
+      "TargetPath": "Views\\Names\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/pmanac/Code/Github/Compbuild/Views/Shared/Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
       "FileKind": "mvc"
@@ -15661,6 +15666,11 @@
     {
       "FilePath": "/home/pmanac/Code/Github/Compbuild/Views/_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/pmanac/Code/Github/Compbuild/Views/Names/Delete.cshtml",
+      "TargetPath": "Views\\Names\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {

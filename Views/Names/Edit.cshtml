@@ -1,11 +1,12 @@
 @model Compbuild.Models.Names
 
 @{
-    ViewData["Title"]="Add name";
+    ViewData["Title"]="Edit name";
 }
-<h1>Add new name</h1>
+<h1>Edit name</h1>
 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-<form method="post" asp-action="Add">
+<form method="post" asp-action="Edit">
+    <input asp-for="ID" hidden />
     <input asp-for="NAME" class="form-control" />
     <input type="submit" class="btn btn-primary" value="Submit" />
 

@@ -9,6 +9,7 @@ namespace Compbuild.Models{
     public class Names{
         [Key]
         public int ID { get; set; }
+        [Required]
         public String NAME { get; set; }
 
     }
