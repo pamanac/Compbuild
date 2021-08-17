@@ -28,9 +28,55 @@ namespace Compbuild.Controllers{
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(Category obj){
-            _db.Category.Add(obj);
+            if(ModelState.IsValid){
+                _db.Category.Add(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(obj);
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int? ID){
+            if(ID == null || ID == 0)
+                return NotFound();
+            var obj = _db.Category.Find(ID); //obj_ID is primary key
+            if(obj==null)
+                return NotFound();
+            return View(obj);
+        }
+
+        
+        public IActionResult Edit(Category obj){
+            if(ModelState.IsValid){
+                _db.Category.Update(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(obj);
+        }
+
+
+        [HttpGet]
+        public IActionResult Delete(int? ID){
+            if(ID == null || ID == 0)
+                return NotFound();
+            var obj = _db.Category.Find(ID); //obj_ID is primary key
+            if(obj==null)
+                return NotFound();
+            return View(obj);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletePost(int? ID){
+            var obj = _db.Category.Find(ID);
+            if(obj == null)
+                return NotFound();
+            _db.Category.Remove(obj);
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
+
     }
 }

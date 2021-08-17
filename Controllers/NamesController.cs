@@ -27,6 +27,7 @@ namespace Compbuild.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Add(Names new_name){
             _db.Names.Add(new_name);
             _db.SaveChanges();

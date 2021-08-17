@@ -15634,6 +15634,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/pmanac/Code/Github/Compbuild/Views/Category/Edit.cshtml",
+      "TargetPath": "Views\\Category\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/pmanac/Code/Github/Compbuild/Views/Names/Index.cshtml",
       "TargetPath": "Views\\Names\\Index.cshtml",
       "FileKind": "mvc"
@@ -15666,6 +15671,11 @@
     {
       "FilePath": "/home/pmanac/Code/Github/Compbuild/Views/Names/Add.cshtml",
       "TargetPath": "Views\\Names\\Add.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/pmanac/Code/Github/Compbuild/Views/Category/Delete.cshtml",
+      "TargetPath": "Views\\Category\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
