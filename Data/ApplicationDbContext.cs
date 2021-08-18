@@ -15,5 +15,7 @@ namespace Compbuild.Data{
 
         public DbSet<Category> Category { get; set; } //Convention is to make this plural (ex. Categories)
         public DbSet<Names> Names { get; set; }
+
+        public DbSet<Computers> Computers {get; set;}
     }
 }

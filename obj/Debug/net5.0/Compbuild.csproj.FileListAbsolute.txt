@@ -78,3 +78,5 @@
 /home/pmanac/Code/Github/Compbuild/obj/Debug/net5.0/Razor/Views/Category/Delete.cshtml.g.cs
 /home/pmanac/Code/Github/Compbuild/obj/Debug/net5.0/Razor/Views/Names/Edit.cshtml.g.cs
 /home/pmanac/Code/Github/Compbuild/obj/Debug/net5.0/Razor/Views/Names/Delete.cshtml.g.cs
+/home/pmanac/Code/Github/Compbuild/obj/Debug/net5.0/Razor/Views/Computers/Index.cshtml.g.cs
+/home/pmanac/Code/Github/Compbuild/obj/Debug/net5.0/Razor/Views/Computers/Details.cshtml.g.cs
