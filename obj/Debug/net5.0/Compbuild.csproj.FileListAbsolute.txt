@@ -9,7 +9,6 @@
 /home/pmanac/Code/Github/Compbuild/bin/Debug/net5.0/Compbuild.pdb
 /home/pmanac/Code/Github/Compbuild/bin/Debug/net5.0/Compbuild.Views.dll
 /home/pmanac/Code/Github/Compbuild/bin/Debug/net5.0/Compbuild.Views.pdb
-/home/pmanac/Code/Github/Compbuild/obj/Debug/net5.0/Compbuild.csprojAssemblyReference.cache
 /home/pmanac/Code/Github/Compbuild/obj/Debug/net5.0/Compbuild.GeneratedMSBuildEditorConfig.editorconfig
 /home/pmanac/Code/Github/Compbuild/obj/Debug/net5.0/Compbuild.AssemblyInfoInputs.cache
 /home/pmanac/Code/Github/Compbuild/obj/Debug/net5.0/Compbuild.AssemblyInfo.cs
@@ -80,3 +79,6 @@
 /home/pmanac/Code/Github/Compbuild/obj/Debug/net5.0/Razor/Views/Names/Delete.cshtml.g.cs
 /home/pmanac/Code/Github/Compbuild/obj/Debug/net5.0/Razor/Views/Computers/Index.cshtml.g.cs
 /home/pmanac/Code/Github/Compbuild/obj/Debug/net5.0/Razor/Views/Computers/Details.cshtml.g.cs
+/home/pmanac/Code/Github/Compbuild/obj/Debug/net5.0/Compbuild.csproj.AssemblyReference.cache
+/home/pmanac/Code/Github/Compbuild/bin/Debug/net5.0/package-lock.json
+/home/pmanac/Code/Github/Compbuild/bin/Debug/net5.0/package.json

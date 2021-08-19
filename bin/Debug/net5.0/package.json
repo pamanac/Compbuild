@@ -1,0 +1,26 @@
+{
+  "name": "compbuild",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pamanac/Compbuild.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pamanac/Compbuild/issues"
+  },
+  "homepage": "https://github.com/pamanac/Compbuild#readme",
+  "dependencies": {
+    "babel-preset-react-app": "^3.1.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}

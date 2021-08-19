@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kPuYbq8sXFaZxk+8wqJOR69zbvZtQL/0hMzaK3FY30IjK8PLE9ZfeVmdWn21RBSqSTxMATZ1MsiNek6ZpW2Crw==",
+  "dgSpecHash": "IQgaXZZuMeyk8wrJLUsLlY7Q1ZAYddqU9L+wr+QkecFCFUQPUi554WWd30l6ZbCfV5X8njQ4M20wd9O3ciiR/Q==",
   "success": true,
   "projectFilePath": "/home/pmanac/Code/Github/Compbuild/Compbuild.csproj",
   "expectedPackageFiles": [
@@ -100,7 +100,9 @@
     "/home/pmanac/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/home/pmanac/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
     "/home/pmanac/.nuget/packages/system.xml.xmldocument/4.3.0/system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "/home/pmanac/.nuget/packages/system.xml.xmlserializer/4.3.0/system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "/home/pmanac/.nuget/packages/system.xml.xmlserializer/4.3.0/system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "/home/pmanac/.nuget/packages/microsoft.netcore.app.ref/5.0.0/microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "/home/pmanac/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
