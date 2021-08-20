@@ -18,6 +18,7 @@ namespace Compbuild.Controllers{
 
         public IActionResult Index(){
             IEnumerable<Computers> objList = _db.Computers;
+            ViewBag.numberOfProducts = objList.Count();
             return View(objList);
         }
 
