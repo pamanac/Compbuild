@@ -9,10 +9,10 @@
         @foreach(var comp in Model){
             <div class="container" style="position: relative;">
                 <p>Computer name: @comp.NAME </p> <br />
-                <img src=@comp.IMAGE_URL alt="Not found" style="max-height: 300px; max-width: 300px" class="computerImage"
+                <img src=@comp.IMAGE_URL alt="Not found" style="max-height: 300px; max-width: 300px" class="computerImage @comp.ID"
                     style="position: absolute;"
                 />
-                <a class="btn btn-info" asp-controller="Computers" asp-action="Details" asp-route-ID="@comp.ID" 
+                <a class="btn btn-info @comp.ID" asp-controller="Computers" asp-action="Details" asp-route-ID="@comp.ID" 
                     style="position: absolute; z-index: 100; left: 30px; margin-top: 100px; margin-left: 30px;"> Details
                 </a>
             </div>
@@ -23,24 +23,24 @@
 </div>
 
 <input type="button" value="I am a useless button" class="btnclass" />
-<script>
+<script type="text/javascript">
     $(document).ready(function () {
         $(".btnclass").click( function (evt) {
             alert('Wow! Such an alert!');
             evt.preventDefault();
         });
-        $(".btn-info").hide();
+        $(".btn.btn-info").hide();
 
-        $(".btn-info").hover( function () {
+        $(".btn.btn-info").hover( function () {
             $(this).show();
         });
-        //var n = parseInt(@ViewBag.numberOfProducts);
-        //for(let id=1; id <= n; id++){
-            $(".computerImage").hover(function(){
-                $(".btn-info").show();
-            }, function(){
-                $(".btn-info").hide();
+        var numProd = parseInt('@ViewBag.numberOfProducts');
+        for(let id = 1; id <= numProd; id++){
+            $(".computerImage."+id).hover(function(){
+                    $(".btn.btn-info."+id).show();
+                }, function(){
+                    $(".btn.btn-info."+id).hide();
             });
-        //}
+        }
     });
 </script>
