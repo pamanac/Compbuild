@@ -15,3 +15,14 @@
         <p> No products in the list </p>
     }
 </div>
+
+<input type="button" value="I am a useless button" class="btnclass" />
+<script>
+    $(document).ready(function () {
+        //Bind the click event for the button
+        $(".btnclass").click( function (evt) {
+            alert('Wow! Such an alert!');
+            evt.preventDefault();
+        });
+    });
+</script>
