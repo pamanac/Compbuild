@@ -5,7 +5,8 @@ import Example from './components/Example';
 export const MyName = () => {
     return (
         <div>
-            Hello From React.js with Webpack and Babel!
+            Hello From React.js with Webpack and Babel! <br/>
+            The links below use React Routing!
             <Example />
         </div>
     )
