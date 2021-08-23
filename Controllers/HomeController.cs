@@ -32,7 +32,12 @@ namespace Compbuild.Controllers
             return View(); //Return Views::Home::Privacy.cshtml
         }
 
-        [Authorize]
+        [HttpGet("denied")]
+        public IActionResult Denied(){
+            return View();
+        }
+
+        [Authorize(Roles = "Admin")]
         public IActionResult Secured(){
             return View();
         }
@@ -50,6 +55,8 @@ namespace Compbuild.Controllers
                 var claims = new List<Claim>();
                 claims.Add(new Claim("username", username));
                 claims.Add(new Claim(ClaimTypes.NameIdentifier, username));
+                claims.Add(new Claim(ClaimTypes.Name, "Bob Ed Jones"));
+                //claims.Add(new Claim(ClaimTypes.Role, "Admin"));
                 var ClaimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var claimsPrincipal = new ClaimsPrincipal(ClaimsIdentity);
                 await HttpContext.SignInAsync(claimsPrincipal);
@@ -59,6 +66,12 @@ namespace Compbuild.Controllers
                 "Error"
             ] = "Error. Username or Password is invalid";
             return View("login");
+        }
+
+        [Authorize] //you need to be logged-in to be able to log out
+        public async Task<IActionResult> Logout(){
+            await HttpContext.SignOutAsync();
+            return Redirect("/"); //home page
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

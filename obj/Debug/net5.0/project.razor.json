@@ -15664,6 +15664,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/pmanac/Code/Github/Compbuild/Views/Home/Denied.cshtml",
+      "TargetPath": "Views\\Home\\Denied.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/pmanac/Code/Github/Compbuild/Views/Home/Secured.cshtml",
       "TargetPath": "Views\\Home\\Secured.cshtml",
       "FileKind": "mvc"

@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Security.Claims;
 
 namespace Compbuild
 {
@@ -36,6 +37,25 @@ namespace Compbuild
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
             .AddCookie(options => {
                 options.LoginPath = "/login";
+                options.AccessDeniedPath = "/denied";
+                options.Events = new CookieAuthenticationEvents(){
+                    OnSigningIn = async context =>{
+                        var principal = context.Principal;
+                        if(principal.HasClaim(c => c.Type == ClaimTypes.NameIdentifier)){ //has ID?
+                            if(principal.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier).Value == "bob"){ //is he bob?
+                                var claimsIdentity = principal.Identity as ClaimsIdentity;
+                                claimsIdentity.AddClaim(new Claim(ClaimTypes.Role, "Admin")); //give him admin role
+                            }
+                        }
+                        await Task.CompletedTask;
+                    },
+                    OnSignedIn = async context => {
+                        await Task.CompletedTask;
+                    },
+                    OnValidatePrincipal = async context =>{
+                        await Task.CompletedTask;
+                    }
+                };
             });
         }
 
