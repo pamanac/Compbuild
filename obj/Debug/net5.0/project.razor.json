@@ -15659,6 +15659,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/pmanac/Code/Github/Compbuild/Views/Home/Login.cshtml",
+      "TargetPath": "Views\\Home\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/pmanac/Code/Github/Compbuild/Views/Home/Secured.cshtml",
+      "TargetPath": "Views\\Home\\Secured.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/pmanac/Code/Github/Compbuild/Views/Names/Edit.cshtml",
       "TargetPath": "Views\\Names\\Edit.cshtml",
       "FileKind": "mvc"
